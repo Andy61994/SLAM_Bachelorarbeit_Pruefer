@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<robot name="test_robot">
+
+	<link name="base_footprint" />
+	
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.043" radius="0.110"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.06945"/>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+	 <collision>
+		<geometry>
+			<cylinder length="0.043" radius="0.110"/>
+		</geometry>
+		 <origin rpy="0 0 0" xyz="0 0 0.16945"/>
+	 </collision>
+    <inertial>
+      <mass value="5"/>
+      <inertia ixx="0.0395416666667" ixy="0.0" ixz="0.0" iyy="0.106208333333" iyz="0.0" izz="0.106208333333"/>
+    </inertial>
+  </link>
+	
+	<joint name="base_footprint_joint" type="fixed">
+  <parent link="base_footprint" />
+  <child link="base_link" />
+</joint>
+  
+  <link name="lwheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.027" radius="0.0335"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+	 <collision>
+		<geometry>
+			<cylinder length="0.027" radius="0.0335"/>
+		</geometry>
+		 <origin rpy="0 0 0" xyz="0 0 0"/>
+	 </collision>
+   <inertial>
+      <mass value="0.2"/>
+     <inertia ixx="0.000526666666667" ixy="0.0" ixz="0.0" iyy="0.000526666666667" iyz="0.0" izz="0.001"/> 
+    </inertial>
+  </link>
+  
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="lwheel"/>
+	<axis xyz="0 0 1"/>
+    <origin xyz="0 0.085 0.0335" rpy="-1.5708 0 0"/>
+     <limit effort="10000" velocity="1000"/>
+     <joint_properties damping="1.0" friction="1.0"/>
+  </joint>
+	
+<transmission name="left_wheel_transmission">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="left_wheel_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="left_wheel_actuator">
+    <mechanicalReduction>7</mechanicalReduction>
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
+  
+  <link name="rwheel">
+    <visual>
+      <geometry>
+        <cylinder length="0.027" radius="0.0335"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+	 <collision>
+		<geometry>
+			<cylinder length="0.027" radius="0.0335"/>
+		</geometry>
+		 <origin rpy="0 0 0" xyz="0 0 0"/>
+	 </collision>
+   <inertial>
+      <mass value="0.2"/>
+     <inertia ixx="0.000526666666667" ixy="0.0" ixz="0.0" iyy="0.000526666666667" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+  
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="rwheel"/>
+	<axis xyz="0 0 1"/>
+    <origin xyz="0 -0.085 0.0335" rpy="-1.5708 0 0"/>
+     <limit effort="10000" velocity="1000"/>
+     <joint_properties damping="1.0" friction="1.0"/>
+  </joint>
+	
+		<transmission name="right_wheel_transmission">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="right_wheel_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="right_wheel_actuator">
+    <mechanicalReduction>7</mechanicalReduction>
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </actuator>
+</transmission>
+	
+	<link name="fwheel">
+    <visual>
+      <geometry>
+        <sphere radius="0.0335"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+	 <collision>
+		<geometry>
+			<sphere radius="0.0335"/>
+		</geometry>
+		 <origin rpy="0 0 0" xyz="0 0 0"/>
+	 </collision>
+   <inertial>
+      <mass value="0.2"/>
+     <inertia ixx="0.000526666666667" ixy="0.0" ixz="0.0" iyy="0.000526666666667" iyz="0.0" izz="0.001"/> 
+    </inertial>
+  </link>
+  
+  <joint name="front_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="fwheel"/>
+	<axis xyz="1 1 1"/>
+    <origin xyz="0.07 0 0.0335" rpy="-1.5708 0 0"/>
+     <limit effort="10000" velocity="1000"/>
+     <joint_properties damping="1.0" friction="1.0"/>
+  </joint>
+	
+  
+  <link name="laser">
+    <visual>
+      <geometry>
+        <cylinder length="0.060" radius="0.035"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+	 <collision>
+		<geometry>
+			<cylinder length="0.060" radius="0.035"/>
+		</geometry>
+	 </collision>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="0.00000006" ixy="0.0" ixz="0.0" iyy="0.00000006" iyz="0.0" izz="0.0000003"/>
+    </inertial>
+  </link>
+  
+  <joint name="base_to_laser" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser"/>
+    <origin xyz="-0.04253 0 0.12105" rpy="0 0 3.141593"/>
+	</joint>
+	
+	  <link name="ultra_left">
+    <visual>
+		<geometry>
+            <box size="0.015 0.035 0.01"/>
+  	    </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+	 <collision>
+		<geometry>
+            <box size="0.00 0.00 0.00"/>
+  	    </geometry>
+	 </collision>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="0.00000006" ixy="0.0" ixz="0.0" iyy="0.00000006" iyz="0.0" izz="0.0000003"/>
+    </inertial>
+  </link>
+  
+  <joint name="base_to_ultra_left" type="fixed">
+    <parent link="base_link"/>
+    <child link="ultra_left"/>
+    <origin xyz="0.078 0.078 0.07" rpy="0 0 0.7854"/>
+	</joint>
+	
+		  <link name="ultra_middle">
+    <visual>
+		<geometry>
+            <box size="0.015 0.035 0.01"/>
+  	    </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+	 <collision>
+		<geometry>
+            <box size="0.00 0.00 0.00"/>
+  	    </geometry>
+	 </collision>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="0.00000006" ixy="0.0" ixz="0.0" iyy="0.00000006" iyz="0.0" izz="0.0000003"/>
+    </inertial>
+  </link>
+  
+  <joint name="base_to_ultra_middle" type="fixed">
+    <parent link="base_link"/>
+    <child link="ultra_middle"/>
+    <origin xyz="0.110 0.00 0.07" rpy="0 0 0"/>
+	</joint>
+	
+	  <link name="ultra_right">
+    <visual>
+		<geometry>
+            <box size="0.015 0.035 0.01"/>
+  	    </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+	 <collision>
+		<geometry>
+            <box size="0.00 0.00 0.00"/>
+  	    </geometry>
+	 </collision>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="0.00000006" ixy="0.0" ixz="0.0" iyy="0.00000006" iyz="0.0" izz="0.0000003"/>
+    </inertial>
+  </link>
+  
+  <joint name="base_to_ultra_right" type="fixed">
+    <parent link="base_link"/>
+    <child link="ultra_right"/>
+    <origin xyz="0.078 -0.078 0.07" rpy="0 0 -0.7854"/>
+	</joint>
+	
+	<!--
+	<gazebo>
+    <plugin filename="libgazebo_ros_diff_drive.so" name="differential_drive_controller">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>20</updateRate>
+      <leftJoint>left_wheel_joint</leftJoint>
+      <rightJoint>right_wheel_joint</rightJoint>
+      <wheelSeparation>0.168</wheelSeparation>
+      <wheelDiameter>0.067</wheelDiameter>
+      <torque>1</torque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
+    </plugin>
+  </gazebo>
+	-->
+	
+	<gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/diffbot</robotNamespace>
+    </plugin>
+  </gazebo>
+	
+	  <gazebo reference="laser">
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>20</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.141593</min_angle>
+            <max_angle>3.141593</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.15</min>
+          <max>18.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>laser</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+	
+<gazebo reference="ultra_left">        
+   <sensor type="ray" name="TeraRanger">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>5</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>0.1</min_angle>
+               <max_angle>-0.1</max_angle>
+            </horizontal>
+         </scan>
+         <range>
+            <min>0.03</min>
+            <max>2</max>
+            <resolution>0.05</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>5</updateRate>
+         <topicName>/ultra/left_scan</topicName>
+         <frameName>ultra_left</frameName>
+         <radiation>ultrasound</radiation>
+         <fov>0.1</fov>
+      </plugin>
+   </sensor>  
+   </gazebo>
+	
+	<gazebo reference="ultra_middle">        
+   <sensor type="ray" name="TeraRanger">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>5</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>0.1</min_angle>
+               <max_angle>-0.1</max_angle>
+            </horizontal>
+         </scan>
+         <range>
+            <min>0.03</min>
+            <max>2</max>
+            <resolution>0.05</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>5</updateRate>
+         <topicName>/ultra/middle_scan</topicName>
+         <frameName>ultra_middle</frameName>
+         <radiation>ultrasound</radiation>
+         <fov>0.1</fov>
+      </plugin>
+   </sensor>  
+   </gazebo>
+	
+	<gazebo reference="ultra_right">        
+   <sensor type="ray" name="TeraRanger">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>5</update_rate>
+      <ray>
+         <scan>
+            <horizontal>
+               <samples>1</samples>
+               <resolution>1</resolution> 
+               <min_angle>0.1</min_angle>
+               <max_angle>-0.1</max_angle>
+            </horizontal>
+         </scan>
+         <range>
+            <min>0.03</min>
+            <max>2</max>
+            <resolution>0.05</resolution>
+         </range>
+      </ray>
+      <plugin filename="libgazebo_ros_range.so" name="gazebo_ros_range">
+         <gaussianNoise>0.005</gaussianNoise>
+         <alwaysOn>true</alwaysOn>
+         <updateRate>5</updateRate>
+         <topicName>/ultra/right_scan</topicName>
+         <frameName>ultra_right</frameName>
+         <radiation>ultrasound</radiation>
+         <fov>0.1</fov>
+      </plugin>
+   </sensor>  
+   </gazebo>
+
+
+	
+
+  
+</robot>

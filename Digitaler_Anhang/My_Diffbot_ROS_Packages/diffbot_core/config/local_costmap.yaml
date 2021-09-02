@@ -1,0 +1,8 @@
+global_frame: map
+rolling_window: true
+
+
+plugins:
+  - {name: obstacles_laser_layer,           type: "costmap_2d::ObstacleLayer"}
+#  - {name: range_sensor_layer,                 type: "range_sensor_layer::RangeSensorLayer"}
+  - {name: inflation_l,                 type: "costmap_2d::InflationLayer"}

@@ -1,0 +1,21 @@
+export ROS_MASTER_URI=http://ubuntu-raspi:11311
+export ROS_MASTER_URI=http://ubuntu-desktop:11311
+source install_isolated/setup.bash
+source devel_isolated/setup.bash
+source devel/setup.bash
+
+roslaunch gbot_core gbot.launch
+roslaunch gbot_core visualization.launch
+
+catkin_make_isolated --only-pkg-with-deps newPkg
+catkin_make_isolated --pkg diffbot_gazebo
+
+roslaunch urdf_tutorial display.launch model:='$(find diffbot_description)/urdf/diffbot.urdf'
+
+rosrun gazebo_ros spawn_model -file `rospack find diffbot_description`/urdf/diffbot.urdf -urdf -x 0 -y 0 -z 0 -model diffbot
+
+rosrun rosserial_python serial_node.py /dev/ttyACM0
+
+rosrun map_server map_saver --occ 70 --free 30 -f mymap
+
+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

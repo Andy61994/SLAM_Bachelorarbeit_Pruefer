@@ -1,0 +1,1615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>atmega2560</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <ArduinoProjectType>Sketch</ArduinoProjectType>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <Name>DC_Motor_Ultra</Name>
+    <RootNamespace>HelloWorld</RootNamespace>
+    <ArduinoIdeDir>C:\Program Files (x86)\Arduino</ArduinoIdeDir>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AssemblyName>HelloWorld</AssemblyName>
+    <ResetRule>0</ResetRule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.49.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <avrtoolserialnumber />
+    <avrdeviceexpectedsignature>0x1E9801</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+      </ToolOptions>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+        <avrgcc.common.Device>-mmcu=atmega2560 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560"</avrgcc.common.Device>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+            <Value>F_CPU=16000000L</Value>
+            <Value>ARDUINO=108013</Value>
+            <Value>ARDUINO_AVR_MEGA2560</Value>
+            <Value>ARDUINO_ARCH_AVR</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x0010</Value>
+            <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\include\</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\examples\BlinkM</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\bond</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\control_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\control_toolbox</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\diagnostic_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\examples\BlinkM</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\geometry_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\gps_common</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\laser_assembler</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\map_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\nav_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\nodelet</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\pcl_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\polled_camera</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\ros</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\roscpp</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\roscpp_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosgraph_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rospy_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_arduino</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_mbed</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\sensor_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\shape_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\smach_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\std_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\std_srvs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\stereo_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\tf</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\tf2_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\theora_image_transport</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\topic_tools</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\trajectory_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\turtlesim</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\visualization_msgs</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcc.compiler.optimization.OtherFlags>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.InhibitAllWarnings>True</avrgcc.compiler.warnings.InhibitAllWarnings>
+        <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -std=gnu11</avrgcc.compiler.miscellaneous.OtherFlags>
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+            <Value>F_CPU=16000000L</Value>
+            <Value>ARDUINO=108013</Value>
+            <Value>ARDUINO_AVR_MEGA2560</Value>
+            <Value>ARDUINO_ARCH_AVR</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x0010</Value>
+            <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+          </ListValues>
+        </avrgcccpp.compiler.symbols.DefSymbols>
+        <avrgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\include\</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\examples\BlinkM</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\bond</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\control_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\control_toolbox</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\diagnostic_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\examples\BlinkM</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\geometry_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\gps_common</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\laser_assembler</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\map_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\nav_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\nodelet</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\pcl_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\polled_camera</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\ros</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\roscpp</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\roscpp_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosgraph_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rospy_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_arduino</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_mbed</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\sensor_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\shape_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\smach_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\std_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\std_srvs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\stereo_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\tf</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\tf2_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\theora_image_transport</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\topic_tools</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\trajectory_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\turtlesim</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\visualization_msgs</Value>
+          </ListValues>
+        </avrgcccpp.compiler.directories.IncludePaths>
+        <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcccpp.compiler.optimization.OtherFlags>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+        <avrgcccpp.compiler.warnings.InhibitAllWarnings>True</avrgcccpp.compiler.warnings.InhibitAllWarnings>
+        <avrgcccpp.compiler.miscellaneous.OtherFlags>-std=gnu++11</avrgcccpp.compiler.miscellaneous.OtherFlags>
+        <avrgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.Libraries>
+        <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
+        <avrgcccpp.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\include\</Value>
+          </ListValues>
+        </avrgcccpp.assembler.general.IncludePaths>
+        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+      </AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+        <avrgcc.common.Device>-mmcu=atmega2560 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega2560"</avrgcc.common.Device>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>F_CPU=16000000L</Value>
+            <Value>ARDUINO=108013</Value>
+            <Value>ARDUINO_AVR_MEGA2560</Value>
+            <Value>ARDUINO_ARCH_AVR</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x0010</Value>
+            <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\include\</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\examples\BlinkM</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\bond</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\control_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\control_toolbox</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\diagnostic_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\examples\BlinkM</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\geometry_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\gps_common</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\laser_assembler</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\map_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\nav_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\nodelet</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\pcl_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\polled_camera</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\ros</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\roscpp</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\roscpp_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosgraph_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rospy_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_arduino</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_mbed</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\sensor_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\shape_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\smach_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\std_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\std_srvs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\stereo_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\tf</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\tf2_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\theora_image_transport</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\topic_tools</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\trajectory_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\turtlesim</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\visualization_msgs</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcc.compiler.optimization.OtherFlags>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.InhibitAllWarnings>True</avrgcc.compiler.warnings.InhibitAllWarnings>
+        <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -std=gnu11</avrgcc.compiler.miscellaneous.OtherFlags>
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>F_CPU=16000000L</Value>
+            <Value>ARDUINO=108013</Value>
+            <Value>ARDUINO_AVR_MEGA2560</Value>
+            <Value>ARDUINO_ARCH_AVR</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x0010</Value>
+            <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+          </ListValues>
+        </avrgcccpp.compiler.symbols.DefSymbols>
+        <avrgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\include\</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
+            <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\examples\BlinkM</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\bond</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\control_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\control_toolbox</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\diagnostic_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\examples\BlinkM</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\geometry_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\gps_common</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\laser_assembler</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\map_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\nav_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\nodelet</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\pcl_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\polled_camera</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\ros</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\roscpp</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\roscpp_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosgraph_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rospy_tutorials</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_arduino</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_mbed</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\rosserial_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\sensor_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\shape_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\smach_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\std_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\std_srvs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\stereo_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\tf</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\tf2_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\theora_image_transport</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\topic_tools</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\trajectory_msgs</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\turtlesim</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib</Value>
+            <Value>..\include\libraries\Rosserial_Arduino_Library\src\visualization_msgs</Value>
+          </ListValues>
+        </avrgcccpp.compiler.directories.IncludePaths>
+        <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcccpp.compiler.optimization.OtherFlags>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+        <avrgcccpp.compiler.warnings.InhibitAllWarnings>True</avrgcccpp.compiler.warnings.InhibitAllWarnings>
+        <avrgcccpp.compiler.miscellaneous.OtherFlags>-std=c++11</avrgcccpp.compiler.miscellaneous.OtherFlags>
+        <avrgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.Libraries>
+        <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
+        <avrgcccpp.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.6.364\include\</Value>
+          </ListValues>
+        </avrgcccpp.assembler.general.IncludePaths>
+        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+      </AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DC_Motor_Driver.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DC_Motor_Driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Encoder_Tracker.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Encoder_Tracker.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="events.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="events.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="helperFunctions.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="helperFunctions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\examples\BlinkM\BlinkM_funcs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestRequestAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestRequestActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestRequestActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestRequestActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestRequestFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestRequestGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestRequestResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TestResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TwoIntsAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TwoIntsActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TwoIntsActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TwoIntsActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TwoIntsFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TwoIntsGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\TwoIntsResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_msgs\GoalID.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_msgs\GoalStatus.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_msgs\GoalStatusArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\AveragingAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\AveragingActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\AveragingActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\AveragingActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\AveragingFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\AveragingGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\AveragingResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\FibonacciAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\FibonacciActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\FibonacciActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\FibonacciActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\FibonacciFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\FibonacciGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\FibonacciResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\ArduinoHardware.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\ArduinoIncludes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\bond\Constants.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\bond\Status.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs\ControllersStatistics.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs\ControllerState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs\ControllerStatistics.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs\HardwareInterfaceResources.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs\ListControllers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs\ListControllerTypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs\LoadController.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs\ReloadControllerLibraries.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs\SwitchController.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs\UnloadController.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\FollowJointTrajectoryAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\FollowJointTrajectoryActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\FollowJointTrajectoryActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\FollowJointTrajectoryActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\FollowJointTrajectoryFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\FollowJointTrajectoryGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\FollowJointTrajectoryResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\GripperCommand.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\GripperCommandAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\GripperCommandActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\GripperCommandActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\GripperCommandActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\GripperCommandFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\GripperCommandGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\GripperCommandResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\JointControllerState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\JointTolerance.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\JointTrajectoryAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\JointTrajectoryActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\JointTrajectoryActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\JointTrajectoryActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\JointTrajectoryControllerState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\JointTrajectoryFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\JointTrajectoryGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\JointTrajectoryResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\PidState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\PointHeadAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\PointHeadActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\PointHeadActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\PointHeadActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\PointHeadFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\PointHeadGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\PointHeadResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\QueryCalibrationState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\QueryTrajectoryState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\SingleJointPositionAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\SingleJointPositionActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\SingleJointPositionActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\SingleJointPositionActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\SingleJointPositionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\SingleJointPositionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\SingleJointPositionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\control_toolbox\SetPidGains.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\diagnostic_msgs\AddDiagnostics.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\diagnostic_msgs\DiagnosticArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\diagnostic_msgs\DiagnosticStatus.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\diagnostic_msgs\KeyValue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\diagnostic_msgs\SelfTest.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\BoolParameter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\ConfigDescription.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\DoubleParameter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\Group.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\GroupState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\IntParameter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\ParamDescription.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\Reconfigure.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\SensorLevels.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\StrParameter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\Esp8266Hardware.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\examples\BlinkM\BlinkM_funcs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\ApplyBodyWrench.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\ApplyJointEffort.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\BodyRequest.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\ContactsState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\ContactState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\DeleteLight.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\DeleteModel.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\GetJointProperties.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\GetLightProperties.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\GetLinkProperties.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\GetLinkState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\GetModelProperties.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\GetModelState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\GetPhysicsProperties.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\GetWorldProperties.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\JointRequest.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\LinkState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\LinkStates.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\ModelState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\ModelStates.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\ODEJointProperties.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\ODEPhysics.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\SetJointProperties.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\SetJointTrajectory.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\SetLightProperties.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\SetLinkProperties.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\SetLinkState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\SetModelConfiguration.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\SetModelState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\SetPhysicsProperties.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\SpawnModel.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\WorldState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Accel.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\AccelStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\AccelWithCovariance.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\AccelWithCovarianceStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Inertia.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\InertiaStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Point.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Point32.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\PointStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Polygon.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\PolygonStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Pose.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Pose2D.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\PoseArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\PoseStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\PoseWithCovariance.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\PoseWithCovarianceStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Quaternion.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\QuaternionStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Transform.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\TransformStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Twist.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\TwistStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\TwistWithCovariance.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\TwistWithCovarianceStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Vector3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Vector3Stamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\Wrench.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\WrenchStamped.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gps_common\GPSFix.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\gps_common\GPSStatus.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\laser_assembler\AssembleScans.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\laser_assembler\AssembleScans2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\map_msgs\GetMapROI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\map_msgs\GetPointMap.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\map_msgs\GetPointMapROI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\map_msgs\OccupancyGridUpdate.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\map_msgs\PointCloud2Update.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\map_msgs\ProjectedMap.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\map_msgs\ProjectedMapInfo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\map_msgs\ProjectedMapsInfo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\map_msgs\SaveMap.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\map_msgs\SetMapProjections.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\GetMap.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\GetMapAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\GetMapActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\GetMapActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\GetMapActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\GetMapFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\GetMapGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\GetMapResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\GetPlan.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\GridCells.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\MapMetaData.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\OccupancyGrid.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\Odometry.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\Path.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\SetMap.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nodelet\NodeletList.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nodelet\NodeletLoad.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\nodelet\NodeletUnload.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\pcl_msgs\ModelCoefficients.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\pcl_msgs\PointIndices.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\pcl_msgs\PolygonMesh.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\pcl_msgs\Vertices.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\polled_camera\GetPolledImage.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\ros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\roscpp\Empty.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\roscpp\GetLoggers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\roscpp\Logger.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\roscpp\SetLoggerLevel.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\roscpp_tutorials\TwoInts.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosgraph_msgs\Clock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosgraph_msgs\Log.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosgraph_msgs\TopicStatistics.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rospy_tutorials\AddTwoInts.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rospy_tutorials\BadTwoInts.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rospy_tutorials\Floats.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rospy_tutorials\HeaderString.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_arduino\Adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_arduino\Test.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_mbed\Adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_mbed\Test.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_msgs\Log.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_msgs\RequestMessageInfo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_msgs\RequestParam.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_msgs\RequestServiceInfo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_msgs\TopicInfo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\ros\duration.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\ros\msg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\ros\node_handle.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\ros\publisher.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\ros\service_client.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\ros\service_server.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\ros\subscriber.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\ros\time.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\BatteryState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\CameraInfo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\ChannelFloat32.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\CompressedImage.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\FluidPressure.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\Illuminance.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\Image.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\Imu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\JointState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\Joy.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\JoyFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\JoyFeedbackArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\LaserEcho.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\LaserScan.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\MagneticField.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\MultiDOFJointState.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\MultiEchoLaserScan.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\NavSatFix.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\NavSatStatus.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\PointCloud.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\PointCloud2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\PointField.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\Range.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\RegionOfInterest.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\RelativeHumidity.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\SetCameraInfo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\Temperature.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\TimeReference.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\shape_msgs\Mesh.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\shape_msgs\MeshTriangle.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\shape_msgs\Plane.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\shape_msgs\SolidPrimitive.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\smach_msgs\SmachContainerInitialStatusCmd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\smach_msgs\SmachContainerStatus.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\smach_msgs\SmachContainerStructure.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Bool.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Byte.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\ByteMultiArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Char.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\ColorRGBA.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Duration.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Empty.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Float32.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Float32MultiArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Float64.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Float64MultiArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Header.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Int16.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Int16MultiArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Int32.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Int32MultiArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Int64.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Int64MultiArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Int8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Int8MultiArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\MultiArrayDimension.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\MultiArrayLayout.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\StringMsg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\Time.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\UInt16.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\UInt16MultiArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\UInt32.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\UInt32MultiArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\UInt64.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\UInt64MultiArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\UInt8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\UInt8MultiArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_srvs\Empty.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_srvs\SetBool.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\std_srvs\Trigger.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\stereo_msgs\DisparityImage.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf2_msgs\FrameGraph.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf2_msgs\LookupTransformAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf2_msgs\LookupTransformActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf2_msgs\LookupTransformActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf2_msgs\LookupTransformActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf2_msgs\LookupTransformFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf2_msgs\LookupTransformGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf2_msgs\LookupTransformResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf2_msgs\TF2Error.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf2_msgs\TFMessage.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf\FrameGraph.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf\tf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf\tfMessage.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\tf\transform_broadcaster.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\theora_image_transport\Packet.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\topic_tools\DemuxAdd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\topic_tools\DemuxDelete.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\topic_tools\DemuxList.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\topic_tools\DemuxSelect.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\topic_tools\MuxAdd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\topic_tools\MuxDelete.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\topic_tools\MuxList.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\topic_tools\MuxSelect.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\trajectory_msgs\JointTrajectory.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\trajectory_msgs\JointTrajectoryPoint.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\trajectory_msgs\MultiDOFJointTrajectory.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\trajectory_msgs\MultiDOFJointTrajectoryPoint.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtlesim\Color.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtlesim\Kill.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtlesim\Pose.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtlesim\SetPen.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtlesim\Spawn.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtlesim\TeleportAbsolute.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtlesim\TeleportRelative.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib\ShapeAction.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib\ShapeActionFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib\ShapeActionGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib\ShapeActionResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib\ShapeFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib\ShapeGoal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib\ShapeResult.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib\Velocity.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\visualization_msgs\ImageMarker.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\visualization_msgs\InteractiveMarker.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\visualization_msgs\InteractiveMarkerControl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\visualization_msgs\InteractiveMarkerFeedback.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\visualization_msgs\InteractiveMarkerInit.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\visualization_msgs\InteractiveMarkerPose.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\visualization_msgs\InteractiveMarkerUpdate.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\visualization_msgs\Marker.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\visualization_msgs\MarkerArray.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Rosserial_Arduino_Library\src\visualization_msgs\MenuEntry.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="PidController.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="PidController.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="queue.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="queue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Rosserial_Arduino_Library\src\duration.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Rosserial_Arduino_Library\src\time.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="timer.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ultra_Sonic_Range_Finder_Driver.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Ultra_Sonic_Range_Finder_Driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Content Include="readme.html">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArduinoCore\ArduinoCore.cppproj">
+      <Name>ArduinoCore</Name>
+      <Project>c8037e0e-310a-49b1-97b1-da4d5bf688c2</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="include\" />
+    <Folder Include="include\libraries\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\examples\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\examples\BlinkM\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\actionlib\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\actionlib_tutorials\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\bond\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\controller_manager_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\control_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\control_toolbox\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\diagnostic_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\dynamic_reconfigure\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\examples\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\examples\BlinkM\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\gazebo_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\geometry_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\gps_common\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\laser_assembler\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\map_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\nav_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\nodelet\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\pcl_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\polled_camera\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\roscpp\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\roscpp_tutorials\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\rosgraph_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\rospy_tutorials\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_arduino\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_mbed\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\rosserial_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\ros\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\sensor_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\shape_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\smach_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\std_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\std_srvs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\stereo_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\tf2_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\tf\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\theora_image_transport\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\topic_tools\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\trajectory_msgs\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\turtlesim\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\turtle_actionlib\" />
+    <Folder Include="include\libraries\Rosserial_Arduino_Library\src\visualization_msgs\" />
+    <Folder Include="src\" />
+    <Folder Include="src\libraries\" />
+    <Folder Include="src\libraries\Rosserial_Arduino_Library\" />
+    <Folder Include="src\libraries\Rosserial_Arduino_Library\src\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

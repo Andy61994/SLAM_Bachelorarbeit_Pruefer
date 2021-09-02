@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+	<include file="$(find diffbot_hardware_interface)/launch/diffbot_hardware_init.launch"/>
+	<include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+	
+	<include file="$(find my_mapping)/launch/cartographer.launch"/>
+	<!--<include file="$(find diffbot_rviz)/launch/nav_rviz.launch"/>-->
+	
+	
+
+</launch>

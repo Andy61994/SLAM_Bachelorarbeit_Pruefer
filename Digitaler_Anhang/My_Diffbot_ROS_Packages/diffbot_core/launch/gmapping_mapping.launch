@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+	
+	<arg name="map_file" default="$(find diffbot_core)/maps/layout.yaml"/>
+	
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" >
+  	</node> 
+	
+	<include file="$(find my_gazebo_worlds)/launch/hallway.launch"/>
+	<include file="$(find diffbot_description)/launch/spawn.launch"/>
+	<include file="$(find my_mapping)/launch/gmapping.launch"/>
+	<include file="$(find diffbot_rviz)/launch/mapping_rviz.launch"/>
+	
+	
+
+</launch>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+	
+	<node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen"> 
+		<param name="_repeat_rate" value="10.0"/>
+		<param name="_key_timeout" value="0.1"/>
+		<remap from="cmd_vel" to="diffbot/mobile_base_controller/cmd_vel"/> 
+	</node>
+	
+		
+</launch>

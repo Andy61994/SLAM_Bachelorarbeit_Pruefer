@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+	
+	<include file="$(find my_gazebo_worlds)/launch/hallway.launch"/>
+	<include file="$(find diffbot_description)/launch/spawn.launch"/>
+	<include file="$(find my_mapping)/launch/gmapping.launch"/>
+	<include file="$(find diffbot_core)/launch/move_base.launch" />
+	<include file="$(find diffbot_rviz)/launch/nav_rviz.launch"/>
+	
+	
+
+</launch>
